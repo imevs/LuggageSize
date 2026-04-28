@@ -9,10 +9,6 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "fetch-baggage": "tsx scripts/fetch-baggage.ts",
-    "fetch-html": "tsx scripts/fetch-html.ts",
-    "error-report": "tsx scripts/generate-error-report.ts",
-    "merge-baggage": "tsx scripts/merge-data.ts",
     "generate-airlines": "tsx scripts/generate-airlines.ts"
   },
   "devDependencies": {
