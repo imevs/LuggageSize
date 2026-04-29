@@ -10,7 +10,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://en.aegeanair.com/travel-info/baggage/cabin-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -52,7 +52,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.aerlingus.com/prepare-packing/baggage-information/carry-on-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -101,13 +101,13 @@ export const airlines: Airline[] = [
   {
     "id": "AERLINRE",
     "name": "Aer Lingus Regional",
-    "iata": "",
-    "country": "",
+    "iata": "EI",
+    "country": "IE",
     "alliance": null,
-    "region": "Global",
+    "region": "Europe",
     "website": "https://www.aerlingus.com/prepare-packing/baggage-information/carry-on-baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -149,7 +149,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.aeroflot.ru/ru-en/information/airport/baggage/hand_luggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -228,7 +228,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.aerolineas.com.ar/en-ar/luggage/baggage_allowance",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -270,7 +270,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.aeromexico.com/en-us/travel-information/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -319,13 +319,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRALG",
     "name": "Air Algerie",
-    "iata": "AH",
-    "country": "DZ",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Africa",
+    "region": "Global",
     "website": "https://www.airalgerie.dz/en/passenger/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -367,7 +367,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.airarabia.com/en/hand-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -422,7 +422,7 @@ export const airlines: Airline[] = [
     "region": "Central Asia",
     "website": "https://www.airastana.com/kaz/en-us/Information/Before-You-Fly/Baggage/Cabin-Baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -458,13 +458,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRAUS",
     "name": "Air Austral",
-    "iata": "UU",
-    "country": "RE",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Africa",
+    "region": "Global",
     "website": "https://www.air-austral.com/en/prepare-your-flight/baggage/cabin-baggage.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -506,7 +506,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.airbaltic.com/en/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -542,13 +542,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRCAI",
     "name": "Air Cairo",
-    "iata": "SM",
-    "country": "EG",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Africa",
+    "region": "Global",
     "website": "https://www.aircairo.com/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -590,7 +590,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.aircanada.com/en/ca/aco/contents/travel/baggage/carry-on.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -645,7 +645,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.airchina.com/us/en/travel-guide/baggage-policies/cabin-baggage.shtml",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -694,13 +694,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRCOR",
     "name": "Air Corsica",
-    "iata": "XK",
-    "country": "FR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.aircorsica.com/en/prepare-your-trip/baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -742,7 +742,7 @@ export const airlines: Airline[] = [
     "region": "Global",
     "website": "https://www.air-europa.com/en/information/baggage/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -797,7 +797,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.airfrance.com/en/information/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -852,7 +852,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.airindia.com/in/en/plan-your-trip/baggage.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -888,13 +888,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRMAL",
     "name": "Air Malta",
-    "iata": "KM",
-    "country": "MT",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.kmmaltairlines.com/en/travel-information/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -943,13 +943,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRMAU",
     "name": "Air Mauritius",
-    "iata": "MK",
-    "country": "MU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Africa",
+    "region": "Global",
     "website": "https://www.airmauritius.com/discover/travel-information/baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -985,13 +985,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRMOL",
     "name": "Air Moldova",
-    "iata": "9U",
-    "country": "MD",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1033,7 +1033,7 @@ export const airlines: Airline[] = [
     "region": "Oceania",
     "website": "https://www.airnewzealand.com/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1088,7 +1088,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.airserbia.com/en/information/baggage/hand-luggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1153,13 +1153,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRTAH",
     "name": "Air Tahiti",
-    "iata": "VT",
-    "country": "PF",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Oceania",
+    "region": "Global",
     "website": "https://www.airtahiti.com/en/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1195,13 +1195,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRTAHNU",
     "name": "Air Tahiti Nui",
-    "iata": "TN",
-    "country": "PF",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Oceania",
+    "region": "Global",
     "website": "https://www.airtahitinui.com/baggage-allowances",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1243,7 +1243,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.airtransat.com/en-CA/travel-information/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1292,13 +1292,13 @@ export const airlines: Airline[] = [
   {
     "id": "AIRVAN",
     "name": "Air Vanuatu",
-    "iata": "NF",
-    "country": "VU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Oceania",
+    "region": "Global",
     "website": "https://www.airvanuatu.com/baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1340,7 +1340,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.alaskaair.com/content/travel-info/policies/baggage-carryon",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1389,13 +1389,13 @@ export const airlines: Airline[] = [
   {
     "id": "ALI",
     "name": "Alitalia",
-    "iata": "AZ",
-    "country": "IT",
-    "alliance": "SkyTeam",
-    "region": "Europe",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.ita-airways.com/en_en/fly-ita/baggage/hand-baggage.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1437,7 +1437,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.ana.co.jp/en/jp/travel-information/baggage/carry-on/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1492,7 +1492,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.allegiantair.com/baggage-policy",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1541,13 +1541,13 @@ export const airlines: Airline[] = [
   {
     "id": "ALR",
     "name": "Alrosa",
-    "iata": "6R",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.alrosa.aero/service/passengers/baggage/",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1597,7 +1597,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.aa.com/i18n/travel-info/baggage/carry-on-baggage.jsp",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1646,13 +1646,13 @@ export const airlines: Airline[] = [
   {
     "id": "ARK",
     "name": "Arkia",
-    "iata": "IZ",
-    "country": "IL",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Middle East",
+    "region": "Global",
     "website": "https://www.arkia.com/en/information/baggage-policy/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1694,7 +1694,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://flyasiana.com/C/US/EN/contents/carry-on-baggage/90E5284345D14201A5119E1528628043",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1743,13 +1743,13 @@ export const airlines: Airline[] = [
   {
     "id": "ATLAIR",
     "name": "Atlantic Airways",
-    "iata": "RC",
-    "country": "FO",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.atlanticairways.com/en/travel-info/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1785,13 +1785,13 @@ export const airlines: Airline[] = [
   {
     "id": "AUR",
     "name": "Aurigny",
-    "iata": "GR",
-    "country": "GB",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.aurigny.com/faq",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1827,13 +1827,13 @@ export const airlines: Airline[] = [
   {
     "id": "AURAIRSE",
     "name": "Aurigny Air Services",
-    "iata": "GR",
-    "country": "GB",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.aurigny.com/faq",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1869,13 +1869,13 @@ export const airlines: Airline[] = [
   {
     "id": "AUR38",
     "name": "Aurora",
-    "iata": "HZ",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.flyaurora.ru/information/baggage/",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1917,7 +1917,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.austrian.com/at/en/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -1972,7 +1972,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.avianca.com/us/en/plan-your-trip/baggage/carry-on-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2008,13 +2008,13 @@ export const airlines: Airline[] = [
   {
     "id": "AVIAIR",
     "name": "Avianca Airlines",
-    "iata": "",
-    "country": "",
-    "alliance": null,
-    "region": "Global",
+    "iata": "AV",
+    "country": "CO",
+    "alliance": "Star Alliance",
+    "region": "Latin America",
     "website": "https://www.avianca.com/us/en/plan-your-trip/baggage/carry-on-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2050,13 +2050,13 @@ export const airlines: Airline[] = [
   {
     "id": "AZUAIR",
     "name": "Azur Air",
-    "iata": "ZF",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.azurair.ru/ru/passengers/information/baggage",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2065,7 +2065,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1030,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -2100,13 +2100,13 @@ export const airlines: Airline[] = [
   {
     "id": "AZOAIR",
     "name": "Azores Airlines",
-    "iata": "S4",
-    "country": "PT",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.azoresairlines.pt/en/information/baggage/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2148,7 +2148,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.voeazul.com.br/en/travel-info/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2184,13 +2184,13 @@ export const airlines: Airline[] = [
   {
     "id": "AZI",
     "name": "Azimuth",
-    "iata": "A4",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://azimuth.aero/en/passengers/baggage-rules",
-    "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "region": "Global",
+    "website": "",
+    "generosity": "strict",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2202,7 +2202,7 @@ export const airlines: Airline[] = [
             "unit": "cm"
           },
           "weight": {
-            "value": 510,
+            "value": 5,
             "unit": "kg"
           },
           "quantity": 1,
@@ -2240,7 +2240,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://belavia.by/en/baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2297,13 +2297,13 @@ export const airlines: Airline[] = [
   {
     "id": "BINCAN",
     "name": "Binter Canarias",
-    "iata": "NT",
-    "country": "ES",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.bintercanarias.com/en/flights/prepare-your-trip/baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2339,13 +2339,13 @@ export const airlines: Airline[] = [
   {
     "id": "BLUAIR",
     "name": "Blue Air",
-    "iata": "0B",
-    "country": "RO",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2400,7 +2400,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.britishairways.com/travel/baggage-essentials",
     "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2455,7 +2455,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.brusselsairlines.com/be/en/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2504,13 +2504,13 @@ export const airlines: Airline[] = [
   {
     "id": "BULAIR",
     "name": "Bulgaria Air",
-    "iata": "FB",
-    "country": "BG",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.air.bg/en/baggage-policy",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2565,7 +2565,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.cathaypacific.com/cx/en_HK/baggage/baggage-allowance.html",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2620,7 +2620,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.cebupacificair.com/pages/plan-trip/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2656,13 +2656,13 @@ export const airlines: Airline[] = [
   {
     "id": "CHIAIR",
     "name": "China Airlines",
-    "iata": "CI",
-    "country": "TW",
-    "alliance": "SkyTeam",
-    "region": "Asia",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.china-airlines.com/us/en/prepare/travel-information/baggage-information/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2717,7 +2717,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.ceair.com/en/baggage-rules.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2759,7 +2759,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.ceair.com/en/baggage-rules.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2795,13 +2795,13 @@ export const airlines: Airline[] = [
   {
     "id": "CHISOU",
     "name": "China Southern",
-    "iata": "CZ",
-    "country": "CN",
-    "alliance": "SkyTeam",
-    "region": "Asia",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.csair.com/en/tourguide/luggage_service/carryon_luggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2856,7 +2856,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.condor.com/en/flight-preparation/baggage-and-animals/carry-on-baggage.jsp",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2898,7 +2898,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.copaair.com/en-gs/travel-information/baggage-policy/carry-on-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2934,13 +2934,13 @@ export const airlines: Airline[] = [
   {
     "id": "CROAIR",
     "name": "Croatia Airlines",
-    "iata": "OU",
-    "country": "HR",
-    "alliance": "Star Alliance",
-    "region": "Europe",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.croatiaairlines.com/travel-info/baggage-information/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -2989,13 +2989,13 @@ export const airlines: Airline[] = [
   {
     "id": "CZEAIR",
     "name": "Czech Airlines",
-    "iata": "OK",
-    "country": "CZ",
-    "alliance": "SkyTeam",
-    "region": "Europe",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.csa.cz/en/portal/our-services/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3050,7 +3050,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.delta.com/us/en/baggage/carry-on/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3105,7 +3105,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.easyjet.com/en/help/baggage/cabin-bags-and-hold-luggage",
     "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3160,7 +3160,7 @@ export const airlines: Airline[] = [
     "region": "Africa",
     "website": "https://www.egyptair.com/en/fly/baggage/Pages/carry-on-baggage.aspx",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3210,7 +3210,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.elal.com/en/PassengersInfo/Baggage/Pages/Carry-on-Baggage.aspx",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3252,7 +3252,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.emirates.com/english/before-you-fly/baggage/cabin-baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3287,7 +3287,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 2540,
+            "value": 25,
             "unit": "kg"
           },
           "quantity": 1,
@@ -3315,7 +3315,7 @@ export const airlines: Airline[] = [
     "region": "Africa",
     "website": "https://www.ethiopianairlines.com/AA/EN/book/baggage-information/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3370,7 +3370,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.etihad.com/en-ae/fly-etihad/baggage/allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3425,7 +3425,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.eurowings.com/en/information/baggage/carry-on-baggage.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3480,7 +3480,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.finnair.com/en/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3535,7 +3535,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.flydubai.com/en/plan/baggage/hand-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3592,13 +3592,13 @@ export const airlines: Airline[] = [
   {
     "id": "FLY72",
     "name": "FlyOne",
-    "iata": "5F",
-    "country": "MD",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://flyone.eu/en/Information/Baggage-policy",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3640,7 +3640,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.flyfrontier.com/travel/travel-info/baggage/",
     "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3695,7 +3695,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.garuda-indonesia.com/id/en/garuda-indonesia-experience/on-ground/baggage/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3744,13 +3744,13 @@ export const airlines: Airline[] = [
   {
     "id": "HAWAIR",
     "name": "Hawaiian Airlines",
-    "iata": "HA",
-    "country": "US",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "North America",
+    "region": "Global",
     "website": "https://www.hawaiianairlines.com/our-services/at-the-airport/baggage-fees",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3792,7 +3792,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.iberia.com/gb/baggage/hand-luggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3847,7 +3847,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.icelandair.com/support/baggage/carry-on-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3902,7 +3902,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.goindigo.in/information/baggage.html",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3938,13 +3938,13 @@ export const airlines: Airline[] = [
   {
     "id": "JETAIR",
     "name": "Jet Airways",
-    "iata": "9W",
-    "country": "IN",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -3980,13 +3980,13 @@ export const airlines: Airline[] = [
   {
     "id": "JET",
     "name": "Jet2.com",
-    "iata": "LS",
-    "country": "GB",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.jet2.com/en/flights/baggage/hand-luggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4028,7 +4028,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.jetblue.com/help/baggage-information",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4083,7 +4083,7 @@ export const airlines: Airline[] = [
     "region": "Africa",
     "website": "https://www.kenya-airways.com/prepare-for-travel/baggage/hand-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4132,13 +4132,13 @@ export const airlines: Airline[] = [
   {
     "id": "KLMROYDU",
     "name": "KLM Royal Dutch",
-    "iata": "",
-    "country": "",
-    "alliance": null,
-    "region": "Global",
+    "iata": "KL",
+    "country": "NL",
+    "alliance": "SkyTeam",
+    "region": "Europe",
     "website": "https://www.klm.com/us/en/information/before-you-fly/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4193,7 +4193,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.koreanair.com/content/koreanair/global/en/traveling/baggage/carry-on-baggage.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4242,13 +4242,13 @@ export const airlines: Airline[] = [
   {
     "id": "KUWAIR",
     "name": "Kuwait Airways",
-    "iata": "KU",
-    "country": "KW",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Middle East",
+    "region": "Global",
     "website": "https://www.kuwaitairways.com/en/information/baggage/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4303,7 +4303,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.latamairlines.com/us/en/experience/prepare-your-trip/baggage/carry-on",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4345,7 +4345,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.lot.com/gb/en/travel/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4400,7 +4400,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.lufthansa.com/us/en/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4455,7 +4455,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.malaysiaairlines.com/my/en/plan-trip/baggage/cabin-baggage.html",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4504,13 +4504,13 @@ export const airlines: Airline[] = [
   {
     "id": "NOR",
     "name": "Nordwind",
-    "iata": "N4",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.nordwindairlines.ru/ru/baggage",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4532,7 +4532,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1030,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -4560,7 +4560,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.norwegian.com/en/travel-info/baggage/hand-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4602,7 +4602,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.omanair.com/om/en/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4657,7 +4657,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flypgs.com/en/useful-info/flight-info/baggage-allowance",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4712,7 +4712,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.philippineairlines.com/en/home/travel-essentials/baggage/hand-carry-baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4767,7 +4767,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flypobeda.ru/information/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4789,7 +4789,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1032,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -4817,7 +4817,7 @@ export const airlines: Airline[] = [
     "region": "Oceania",
     "website": "https://www.qantas.com/au/en/travel-info/baggage/carry-on-baggage.html",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4872,7 +4872,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.qatarairways.com/en/baggage/cabin-baggage.html",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4921,13 +4921,13 @@ export const airlines: Airline[] = [
   {
     "id": "REDWIN",
     "name": "Red Wings",
-    "iata": "WZ",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://flyredwings.com/passengers/luggage/",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4936,7 +4936,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1032,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -4971,13 +4971,13 @@ export const airlines: Airline[] = [
   {
     "id": "ROS",
     "name": "Rossiya",
-    "iata": "FV",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.rossiya-airlines.com/en/passengers/baggage/",
-    "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "region": "Global",
+    "website": "",
+    "generosity": "strict",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -4989,7 +4989,7 @@ export const airlines: Airline[] = [
             "unit": "cm"
           },
           "weight": {
-            "value": 510,
+            "value": 5,
             "unit": "kg"
           },
           "quantity": 1,
@@ -4999,7 +4999,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1032,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -5027,7 +5027,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.ryanair.com/gb/en/useful-info/help-centre/terms-and-conditions/baggage-policy",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5082,7 +5082,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.s7.ru/ru/information/baggage/hand-luggage.dot",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5145,7 +5145,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flysas.com/en/travel-info/baggage/carry-on/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5200,7 +5200,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.singaporeair.com/en_UK/us/travel-info/baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5255,7 +5255,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.southwest.com/help/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5310,7 +5310,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.spirit.com/help/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5365,7 +5365,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.swiss.com/ch/en/prepare/baggage/hand-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5420,7 +5420,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flytap.com/en-pt/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5475,7 +5475,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.thaiairways.com/en/travel_information/baggage/baggage_allowance.page",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5517,7 +5517,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.transavia.com/en-eu/faq/baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5572,7 +5572,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.turkishairlines.com/en-int/any-questions/cabin-baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5643,7 +5643,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flyuia.com/ua/en/information/baggage/hand-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5698,7 +5698,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.united.com/en/us/fly/travel/baggage/carry-on.html",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5753,7 +5753,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.uralairlines.ru/information/baggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5762,7 +5762,7 @@ export const airlines: Airline[] = [
         "checked": {
           "dimensions": null,
           "weight": {
-            "value": 1032,
+            "value": 10,
             "unit": "kg"
           },
           "quantity": 1,
@@ -5803,7 +5803,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.vietnamairlines.com/us/en/travel-information/baggage/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5858,7 +5858,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.virginatlantic.com/help/baggage/hand-baggage-allowance",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5913,7 +5913,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.westjet.com/en-ca/travel-info/baggage/carry-on",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -5968,7 +5968,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.wizzair.com/en-gb/information-and-services/travel-information/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6023,7 +6023,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.lionairthai.com/en/Flight/Baggage-Information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6065,7 +6065,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.loganair.co.uk/travel-info/baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6107,7 +6107,7 @@ export const airlines: Airline[] = [
     "region": "Oceania",
     "website": "https://www.rex.com.au/FlightInfo/Baggage.aspx",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6149,7 +6149,7 @@ export const airlines: Airline[] = [
     "region": "Oceania",
     "website": "https://www.virginaustralia.com/au/en/travel-info/baggage/carry-on-baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6185,13 +6185,13 @@ export const airlines: Airline[] = [
   {
     "id": "ASTAIR",
     "name": "Astra Airlines",
-    "iata": "A2",
-    "country": "GR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6233,7 +6233,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.sunwing.ca/en/travel-info/baggage/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6269,13 +6269,13 @@ export const airlines: Airline[] = [
   {
     "id": "GEOAIR",
     "name": "Georgian Airways",
-    "iata": "A9",
-    "country": "GE",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.georgian-airways.com/en/services/baggage.php",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6317,7 +6317,7 @@ export const airlines: Airline[] = [
     "region": "Latin America",
     "website": "https://www.voegol.com.br/en/travel-information/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6359,7 +6359,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.klm.com/us/en/information/before-you-fly/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6401,7 +6401,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.spicejet.com/carry-on-baggage.aspx",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6437,13 +6437,13 @@ export const airlines: Airline[] = [
   {
     "id": "ROYBRUAI",
     "name": "Royal Brunei Airlines",
-    "iata": "BI",
-    "country": "BN",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.flyroyalbrunei.com/en/travel-information/baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6479,13 +6479,13 @@ export const airlines: Airline[] = [
   {
     "id": "ARMAIR",
     "name": "Armenia Aircompany",
-    "iata": "QN",
-    "country": "AM",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6521,13 +6521,13 @@ export const airlines: Airline[] = [
   {
     "id": "CAR",
     "name": "Carpatair",
-    "iata": "V3",
-    "country": "RO",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6563,13 +6563,13 @@ export const airlines: Airline[] = [
   {
     "id": "CORINT",
     "name": "Corsair International",
-    "iata": "SS",
-    "country": "FR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.corsair.fr/en/information/baggage/carry-on-baggage",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6605,13 +6605,13 @@ export const airlines: Airline[] = [
   {
     "id": "CUB",
     "name": "Cubana",
-    "iata": "CU",
-    "country": "CU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Latin America",
-    "website": "https://www.cubana.cu/informacion/equipaje",
+    "region": "Global",
+    "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6647,13 +6647,13 @@ export const airlines: Airline[] = [
   {
     "id": "HAIAIR",
     "name": "Hainan Airlines",
-    "iata": "HU",
-    "country": "CN",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.hainanairlines.com/US/GB/Carry-on-Baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6689,13 +6689,13 @@ export const airlines: Airline[] = [
   {
     "id": "HELAIR",
     "name": "Helvetic Airways",
-    "iata": "2L",
-    "country": "CH",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.helvetic.com/en/travel-information/baggage",
+    "region": "Global",
+    "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6731,13 +6731,13 @@ export const airlines: Airline[] = [
   {
     "id": "JETTIM",
     "name": "Jet Time",
-    "iata": "JU",
-    "country": "DK",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://jettime.com/en/travel-information/baggage/hand-baggage/",
+    "region": "Global",
+    "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6779,7 +6779,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.lot.com/gb/en/travel/baggage/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6815,13 +6815,13 @@ export const airlines: Airline[] = [
   {
     "id": "OLYAIR",
     "name": "Olympic Air",
-    "iata": "OA",
-    "country": "GR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.olympicair.com/en/travel/baggage/allowance",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6857,13 +6857,13 @@ export const airlines: Airline[] = [
   {
     "id": "TUI",
     "name": "TUIfly",
-    "iata": "X3",
-    "country": "DE",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.tuifly.com/en/service/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6899,13 +6899,13 @@ export const airlines: Airline[] = [
   {
     "id": "UKRINTAI",
     "name": "Ukraine International Airlines",
-    "iata": "",
-    "country": "",
+    "iata": "PS",
+    "country": "UA",
     "alliance": null,
-    "region": "Global",
+    "region": "Europe",
     "website": "https://www.flyuia.com/ua/en/information/baggage/hand-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6947,7 +6947,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.swiss.com/ch/en/prepare/baggage/hand-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -6983,13 +6983,13 @@ export const airlines: Airline[] = [
   {
     "id": "IRAAIR",
     "name": "Iran Air",
-    "iata": "IR",
-    "country": "IR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Middle East",
+    "region": "Global",
     "website": "https://www.iranair.com/en/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7025,13 +7025,13 @@ export const airlines: Airline[] = [
   {
     "id": "MIDEASAI",
     "name": "Middle East Airlines",
-    "iata": "ME",
-    "country": "LB",
-    "alliance": "SkyTeam",
-    "region": "Middle East",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.mea.com.lb/english/flying-with-mea/baggage/hand",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7067,13 +7067,13 @@ export const airlines: Airline[] = [
   {
     "id": "PAKINTAI",
     "name": "Pakistan International Airlines",
-    "iata": "PK",
-    "country": "PK",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.piac.com.pk/passenger-information/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7109,13 +7109,13 @@ export const airlines: Airline[] = [
   {
     "id": "ROSAIR",
     "name": "Rossiya Airlines",
-    "iata": "FV",
-    "country": "RU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.rossiya-airlines.com/en/passengers/baggage/",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7157,7 +7157,7 @@ export const airlines: Airline[] = [
     "region": "Africa",
     "website": "https://www.royalairmaroc.com/us-en/baggage/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7199,7 +7199,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.srilankan.com/en_uk/plan-and-book/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7235,13 +7235,13 @@ export const airlines: Airline[] = [
   {
     "id": "SUN",
     "name": "SunExpress",
-    "iata": "XQ",
-    "country": "TR",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.sunexpress.com/en/baggage/hand-luggage/",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7277,13 +7277,13 @@ export const airlines: Airline[] = [
   {
     "id": "SYRAIR",
     "name": "Syrian Air",
-    "iata": "RB",
-    "country": "SY",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Middle East",
-    "website": "https://www.syriaair.com/baggage",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7319,13 +7319,13 @@ export const airlines: Airline[] = [
   {
     "id": "TAR",
     "name": "TAROM",
-    "iata": "RO",
-    "country": "RO",
-    "alliance": "SkyTeam",
-    "region": "Europe",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.tarom.ro/en/information/travel-information/baggage/hand-luggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7361,13 +7361,13 @@ export const airlines: Airline[] = [
   {
     "id": "TURAIR50",
     "name": "Turkmenistan Airlines",
-    "iata": "T5",
-    "country": "TM",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Central Asia",
+    "region": "Global",
     "website": "https://turkmenistanairlines.tm/travel-info/baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7403,13 +7403,13 @@ export const airlines: Airline[] = [
   {
     "id": "UZBAIR",
     "name": "Uzbekistan Airways",
-    "iata": "HY",
-    "country": "UZ",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Central Asia",
+    "region": "Global",
     "website": "https://www.uzairways.com/en/information/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7445,13 +7445,13 @@ export const airlines: Airline[] = [
   {
     "id": "WID",
     "name": "WiderÃ¸e",
-    "iata": "WF",
-    "country": "NO",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
-    "website": "https://www.wideroe.no/en/travel-information/baggage/baggage-rules",
+    "region": "Global",
+    "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7487,13 +7487,13 @@ export const airlines: Airline[] = [
   {
     "id": "BANAIR",
     "name": "Bangkok Airways",
-    "iata": "PG",
-    "country": "TH",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.bangkokair.com/travel-information/baggage-policy",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7529,13 +7529,13 @@ export const airlines: Airline[] = [
   {
     "id": "BLUPANAI",
     "name": "Blue Panorama Airlines",
-    "iata": "BV",
-    "country": "IT",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7571,13 +7571,13 @@ export const airlines: Airline[] = [
   {
     "id": "DRA",
     "name": "Dragonair",
-    "iata": "KA",
-    "country": "HK",
-    "alliance": "oneworld",
-    "region": "Asia",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7613,13 +7613,13 @@ export const airlines: Airline[] = [
   {
     "id": "EDEAIR",
     "name": "Edelweiss Air",
-    "iata": "WK",
-    "country": "CH",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "https://www.flyedelweiss.com/en/Travel-information/Baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7661,7 +7661,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.evaair.com/en-global/managing-your-trip/baggage-information/carry-on-baggage/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7697,13 +7697,13 @@ export const airlines: Airline[] = [
   {
     "id": "FLY58",
     "name": "Flybe",
-    "iata": "BE",
-    "country": "GB",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Europe",
+    "region": "Global",
     "website": "",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7745,7 +7745,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.flydubai.com/en/plan/baggage/hand-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7787,7 +7787,7 @@ export const airlines: Airline[] = [
     "region": "Middle East",
     "website": "https://www.gulfair.com/before-you-fly/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7823,13 +7823,13 @@ export const airlines: Airline[] = [
   {
     "id": "HONKONAI",
     "name": "Hong Kong Airlines",
-    "iata": "HX",
-    "country": "HK",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.hongkongairlines.com/en_HK/flying/info/baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7865,13 +7865,13 @@ export const airlines: Airline[] = [
   {
     "id": "JET62",
     "name": "Jetstar",
-    "iata": "JQ",
-    "country": "AU",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Oceania",
+    "region": "Global",
     "website": "https://www.jetstar.com/au/en/help/articles/carry-on-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7907,13 +7907,13 @@ export const airlines: Airline[] = [
   {
     "id": "LAOAIR",
     "name": "Lao Airlines",
-    "iata": "QV",
-    "country": "LA",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.laoairlines.com/baggage-allowance/",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7949,13 +7949,13 @@ export const airlines: Airline[] = [
   {
     "id": "MANAIR",
     "name": "Mango Airlines",
-    "iata": "JE",
-    "country": "ZA",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Africa",
+    "region": "Global",
     "website": "",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -7991,13 +7991,13 @@ export const airlines: Airline[] = [
   {
     "id": "NOK",
     "name": "NokAir",
-    "iata": "DD",
-    "country": "TH",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.nokair.com/content/en/travel-information/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8033,13 +8033,13 @@ export const airlines: Airline[] = [
   {
     "id": "PEA",
     "name": "Peach",
-    "iata": "MM",
-    "country": "JP",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.flypeach.com/en/lm/ai/airports/baggage/carry_on",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8075,13 +8075,13 @@ export const airlines: Airline[] = [
   {
     "id": "PHIAIR67",
     "name": "Philippines Airlines",
-    "iata": "",
-    "country": "",
+    "iata": "PR",
+    "country": "PH",
     "alliance": null,
-    "region": "Global",
+    "region": "Asia",
     "website": "https://www.philippineairlines.com/en/home/travel-essentials/baggage/hand-carry-baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8123,7 +8123,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.flyporter.com/en-ca/travel-information/baggage/carry-on",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8159,13 +8159,13 @@ export const airlines: Airline[] = [
   {
     "id": "ROYJORAI",
     "name": "Royal Jordanian Airlines",
-    "iata": "RJ",
-    "country": "JO",
-    "alliance": "oneworld",
-    "region": "Middle East",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.rj.com/en/plan-your-trip/baggage-information/carry-on-luggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8201,13 +8201,13 @@ export const airlines: Airline[] = [
   {
     "id": "SAUAIR",
     "name": "Saudia Airlines",
-    "iata": "SV",
-    "country": "SA",
-    "alliance": "SkyTeam",
-    "region": "Middle East",
+    "iata": "",
+    "country": "",
+    "alliance": null,
+    "region": "Global",
     "website": "https://www.saudia.com/before-flying/baggage-information/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8249,7 +8249,7 @@ export const airlines: Airline[] = [
     "region": "Asia",
     "website": "https://www.flyscoot.com/en/plan-your-trip/baggage/cabin-baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8285,13 +8285,13 @@ export const airlines: Airline[] = [
   {
     "id": "SRILANAI",
     "name": "Sri Lankan Airlines",
-    "iata": "",
-    "country": "",
-    "alliance": null,
-    "region": "Global",
+    "iata": "UL",
+    "country": "LK",
+    "alliance": "oneworld",
+    "region": "Asia",
     "website": "https://www.srilankan.com/en_uk/plan-and-book/baggage-allowance",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8327,13 +8327,13 @@ export const airlines: Airline[] = [
   {
     "id": "VIRATLAI",
     "name": "Virgin Atlantic Airways",
-    "iata": "",
-    "country": "",
+    "iata": "VS",
+    "country": "GB",
     "alliance": null,
-    "region": "Global",
+    "region": "Europe",
     "website": "https://www.virginatlantic.com/help/baggage/hand-baggage-allowance",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8369,13 +8369,13 @@ export const airlines: Airline[] = [
   {
     "id": "XIAAIR",
     "name": "Xiamen Airlines",
-    "iata": "MF",
-    "country": "CN",
+    "iata": "",
+    "country": "",
     "alliance": null,
-    "region": "Asia",
+    "region": "Global",
     "website": "https://www.xiamenair.com/en-us/travel-service/baggage/carry-on-baggage",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8417,7 +8417,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.easyjet.com/en/help/baggage/cabin-bags-and-hold-luggage",
     "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8459,7 +8459,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.smartwings.com/en/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8501,7 +8501,7 @@ export const airlines: Airline[] = [
     "region": "Europe",
     "website": "https://www.flynorse.com/en/help/baggage",
     "generosity": "moderate",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8543,7 +8543,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.caymanairways.com/baggage-information",
     "generosity": "strict",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8585,7 +8585,7 @@ export const airlines: Airline[] = [
     "region": "North America",
     "website": "https://www.suncountry.com/baggage-policy",
     "generosity": "generous",
-    "lastUpdated": "2026-04-25",
+    "lastUpdated": "2026-04-29",
     "servesCountries": [],
     "baggage": {
       "economy": {
@@ -8619,4 +8619,5 @@ export const airlines: Airline[] = [
     }
   }
 ];
+
 export default airlines;

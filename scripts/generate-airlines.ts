@@ -628,7 +628,7 @@ function main() {
   console.log(`   → Built ${airlines.length} airline records`);
 
   console.log(`✍️  Writing to ${OUT_PATH} …`);
-  fs.writeFileSync(OUT_PATH, toTs(airlines), 'utf-8');
+  fs.writeFileSync(OUT_PATH, toTs(airlines) + "\r\nexport default airlines;", 'utf-8');
 
   console.log(`✅ Done! ${airlines.length} airlines written to src/data/airlines.ts`);
   console.log('');

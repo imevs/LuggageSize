@@ -23,18 +23,18 @@ let _svgN = 0;
 function renderLuggageSvg(
   dims: Dimensions | null,
   system: UnitSystem,
-  exceeds: boolean,
+  exceeds: { bag: boolean; h: boolean; w: boolean; d: boolean },
 ): string {
   const id = `s${++_svgN}`;
   const VW = 280, VH = 215;
 
-  // colour palette
-  const P = exceeds ? '#ef4444' : '#6366f1';
-  const P2 = exceeds ? '#dc2626' : '#4f46e5';
-  const P3 = exceeds ? '#b91c1c' : '#3730a3';
-  const fa = exceeds ? 0.18 : 0.18;  // front alpha
-  const ta = exceeds ? 0.10 : 0.10;  // top alpha
-  const sa = exceeds ? 0.13 : 0.13;  // side alpha
+  // colour palette (always use indigo for the bag shell so red arrows pop)
+  const P = '#6366f1';
+  const P2 = '#4f46e5';
+  const P3 = '#3730a3';
+  const fa = 0.18;  // front alpha
+  const ta = 0.10;  // top alpha
+  const sa = 0.13;  // side alpha
 
   // dimensions
   let hDim = 55, wDim = 40, dDim = 20;
@@ -192,19 +192,24 @@ function renderLuggageSvg(
     <line x1="${f(w1X + wR)}" y1="${f(wY)}" x2="${f(w2X - wR)}" y2="${f(wY)}" stroke="${P}" stroke-width="1" stroke-opacity="0.3"/>`;
 
   // ── dimension arrows ─────────────────────────────────────────────────
-  function arr(x1: number, y1: number, x2: number, y2: number, lbl: string, lx: number, ly: number, anc = 'middle'): string {
+  function arr(x1: number, y1: number, x2: number, y2: number, lbl: string, lx: number, ly: number, color: string, anc = 'middle'): string {
     const S = 5, dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy) || 1;
     const ux = dx / L, uy = dy / L, px = -uy * S * 0.5, py = ux * S * 0.5;
     const tip = (ax: number, ay: number, sx: number, sy: number) =>
       `M${f(ax)},${f(ay)} L${f(ax + sx * S + px)},${f(ay + sy * S + py)} M${f(ax)},${f(ay)} L${f(ax + sx * S - px)},${f(ay + sy * S - py)}`;
-    return `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${P}" stroke-width="1" stroke-dasharray="3,2.5"/>
-      <path d="${tip(x1, y1, ux, uy)} ${tip(x2, y2, -ux, -uy)}" stroke="${P}" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-      <text x="${f(lx)}" y="${f(ly)}" text-anchor="${anc}" fill="${P}" font-size="8.5" font-weight="700" font-family="Inter,system-ui,sans-serif">${lbl}</text>`;
+    const isEx = color === '#ef4444';
+    return `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${color}" stroke-width="${isEx ? 2 : 1}" stroke-dasharray="3,2.5"/>
+      <path d="${tip(x1, y1, ux, uy)} ${tip(x2, y2, -ux, -uy)}" stroke="${color}" stroke-width="${isEx ? 2.5 : 1.4}" fill="none" stroke-linecap="round"/>
+      <text x="${f(lx)}" y="${f(ly)}" text-anchor="${anc}" fill="${color}" font-size="${isEx ? 10 : 8.5}" font-weight="${isEx ? 800 : 700}" font-family="Inter,system-ui,sans-serif">${lbl}</text>`;
   }
 
-  const hArr = arr(x0 - 10, y0, x0 - 10, y0 - pH, hLbl, x0 - 12, y0 - pH / 2 + 3, 'end');
-  const wArr = arr(x0, y0 + 12, x0 + pW, y0 + 12, wLbl, x0 + pW / 2, y0 + 24);
-  const dArr = arr(fbr[0] + 6, fbr[1] + 10, bbr[0] + 6, bbr[1] + 10, dLbl, fbr[0] + ox / 2 + 12, fbr[1] - oy / 2 + 24, 'middle');
+  const hc = exceeds.h ? '#ef4444' : P;
+  const wc = exceeds.w ? '#ef4444' : P;
+  const dc = exceeds.d ? '#ef4444' : P;
+
+  const hArr = arr(x0 - 10, y0, x0 - 10, y0 - pH, hLbl, x0 - 12, y0 - pH / 2 + 3, hc, 'end');
+  const wArr = arr(x0, y0 + 12, x0 + pW, y0 + 12, wLbl, x0 + pW / 2, y0 + 24, wc, 'middle');
+  const dArr = arr(fbr[0] + 6, fbr[1] + 10, bbr[0] + 6, bbr[1] + 10, dLbl, fbr[0] + ox / 2 + 12, fbr[1] - oy / 2 + 24, dc, 'middle');
 
   return `<svg viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg" class="luggage-svg" aria-hidden="true">
   ${defs}
@@ -264,7 +269,20 @@ export function renderCard(
   const allowance = category === 'personalItem' ? bag.personalItem : bag[category];
   const allianceColor = airline.alliance ? (ALLIANCE_COLOR[airline.alliance] ?? '#6366f1') : '#6366f1';
 
-  const exceeds = userBag ? checkBagExceeds(userBag, allowance) : false;
+  const exceedsBag = userBag ? checkBagExceeds(userBag, allowance) : false;
+  let exH = false, exW = false, exD = false, exWt = false;
+
+  if (userBag && allowance && allowance.dimensions) {
+    const uD = [userBag.length, userBag.width, userBag.height].sort((a, b) => b - a) as [number, number, number];
+    const aD = [allowance.dimensions.length, allowance.dimensions.width, allowance.dimensions.height].sort((a, b) => b - a) as [number, number, number];
+    exH = aD[0] > 0 && uD[0] > aD[0];
+    exW = aD[1] > 0 && uD[1] > aD[1];
+    exD = aD[2] > 0 && uD[2] > aD[2];
+  }
+  if (userBag && allowance && allowance.weight.value !== null) {
+    exWt = userBag.weight > allowance.weight.value;
+  }
+  const exceedsDims = { bag: exceedsBag, h: exH, w: exW, d: exD };
 
   const wtStr = allowance ? formatWeight(allowance.weight, unitSystem) : '—';
   const qty = allowance?.quantity ?? 1;
@@ -273,18 +291,18 @@ export function renderCard(
   const initials = airline.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
   const isRegionActive = activeRegions.includes(airline.region);
 
-  const svg = renderLuggageSvg(allowance?.dimensions ?? null, unitSystem, exceeds);
+  const svg = renderLuggageSvg(allowance?.dimensions ?? null, unitSystem, exceedsDims);
 
   return `
     <article
-      class="card ${isSelected ? 'card--selected' : ''} ${inComparison ? 'card--comparing' : ''} ${exceeds ? 'card--exceeds' : ''}"
+      class="card ${isSelected ? 'card--selected' : ''} ${inComparison ? 'card--comparing' : ''} ${exceedsBag ? 'card--exceeds' : ''}"
       data-airline-id="${airline.id}"
       tabindex="0"
       role="button"
       aria-label="View luggage details for ${airline.name}"
       id="card-${airline.id}"
     >
-      ${exceeds ? '<div class="card__warning">Exceeds allowance</div>' : ''}
+      ${exceedsBag ? '<div class="card__warning">Exceeds allowance</div>' : ''}
 
       <div class="card__header">
         <div class="card__logo" style="--accent: ${allianceColor}; background: none; box-shadow: none;" aria-hidden="true">
@@ -321,7 +339,7 @@ export function renderCard(
         <div class="card__bag-stat">
           <span class="card__bag-icon">⚖️</span>
           <span class="card__bag-label">Weight</span>
-          <span class="card__bag-value">${wtStr}</span>
+          <span class="card__bag-value" style="${exWt ? 'color: #ef4444; font-weight: 800;' : ''}">${wtStr}</span>
         </div>
         <div class="card__bag-stat">
           <span class="card__bag-icon">🎫</span>
