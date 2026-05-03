@@ -79,5 +79,7 @@ export interface AppState {
     weight: number;
   } | null;
   showBagModal: boolean;
+  favorites: string[];
+  showFavoritesOnly: boolean;
 }
 

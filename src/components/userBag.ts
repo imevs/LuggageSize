@@ -5,7 +5,10 @@ export function renderUserBagModal(state: AppState): string {
   const dimUnit = isMetric ? 'cm' : 'in';
   const weightUnit = isMetric ? 'kg' : 'lb';
   
-  const bag = state.userBag || { length: '', width: '', height: '', weight: '' };
+  const defaultBag = isMetric 
+    ? { length: '55', width: '40', height: '20', weight: '8' }
+    : { length: '22', width: '14', height: '9', weight: '18' };
+  const bag = state.userBag || defaultBag;
 
   return `
     <div class="modal-backdrop" id="bag-modal-backdrop" role="dialog" aria-modal="true" aria-label="My Bag Details">

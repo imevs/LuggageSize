@@ -93,6 +93,10 @@ export function filterByCountry(
   );
 }
 
+export function filterFavorites(airlines: Airline[], favorites: string[]): Airline[] {
+  return airlines.filter(a => favorites.includes(a.id));
+}
+
 // ── Fuzzy match helper ───────────────────────────────────────────────
 
 export function fuzzyMatch(text: string, query: string): boolean {

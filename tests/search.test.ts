@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { searchAirlines, sortAirlines, filterByCountry, fuzzyMatch } from '../src/utils/search';
+import { searchAirlines, sortAirlines, filterByCountry, fuzzyMatch, filterFavorites } from '../src/utils/search';
 import airlines from '../src/data/airlines';
 
 describe('fuzzyMatch', () => {
@@ -31,17 +31,17 @@ describe('searchAirlines', () => {
 
   it('finds British Airways by name', () => {
     const results = searchAirlines(airlines, 'british');
-    expect(results.some(a => a.id === 'BA')).toBe(true);
+    expect(results.some(a => a.id === 'BRIAIR')).toBe(true);
   });
 
   it('finds by IATA code', () => {
     const results = searchAirlines(airlines, 'EK');
-    expect(results.some(a => a.id === 'EK')).toBe(true);
+    expect(results.some(a => a.id === 'EMI')).toBe(true);
   });
 
   it('finds Ryanair by partial name', () => {
     const results = searchAirlines(airlines, 'ryan');
-    expect(results.some(a => a.id === 'FR')).toBe(true);
+    expect(results.some(a => a.id === 'RYA')).toBe(true);
   });
 
   it('returns empty for unmatched query', () => {
@@ -86,6 +86,26 @@ describe('filterByCountry', () => {
 
   it('returns empty for unknown country', () => {
     const results = filterByCountry(airlines, 'XX');
+    expect(results.length).toBe(0);
+  });
+});
+
+describe('filterFavorites', () => {
+  it('returns only favorite airlines', () => {
+    const favorites = ['BRIAIR', 'EMI'];
+    const results = filterFavorites(airlines, favorites);
+    expect(results.length).toBe(2);
+    expect(results.some(a => a.id === 'BRIAIR')).toBe(true);
+    expect(results.some(a => a.id === 'EMI')).toBe(true);
+  });
+
+  it('returns empty array if no favorites match', () => {
+    const results = filterFavorites(airlines, ['NOT_REAL_AIRLINE']);
+    expect(results.length).toBe(0);
+  });
+
+  it('returns empty array if favorites list is empty', () => {
+    const results = filterFavorites(airlines, []);
     expect(results.length).toBe(0);
   });
 });

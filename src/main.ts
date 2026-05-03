@@ -3,7 +3,7 @@ import type { AppState, BagCategory, SortOption, UnitSystem, ThemeMode } from '.
 import airlines from './data/airlines';
 import { getAirlinesForCountry } from './data/countries';
 import { detectLocation, getCountryName } from './utils/geo';
-import { searchAirlines, sortAirlines, filterByRegion } from './utils/search';
+import { searchAirlines, sortAirlines, filterByRegion, filterFavorites } from './utils/search';
 import { renderHeader } from './components/header';
 import { renderSearch } from './components/search';
 import { renderGrid } from './components/card';
@@ -14,23 +14,31 @@ import { getInitialTheme, applyTheme, toggleTheme } from './components/theme';
 
 // ── Initial State ────────────────────────────────────────────────────
 
+const favsStr = localStorage.getItem('skybag-favorites');
+const initialFavorites: string[] = favsStr ? JSON.parse(favsStr) : [];
+
+const prefsStr = localStorage.getItem('skybag-prefs');
+const prefs = prefsStr ? JSON.parse(prefsStr) : {};
+
 const state: AppState = {
   airlines: [],
   filteredAirlines: [],
-  searchQuery: '',
-  activeCategory: 'carryOn',
-  activeCabinClass: 'economy',
-  unitSystem: 'metric',
+  searchQuery: prefs.searchQuery ?? '',
+  activeCategory: prefs.activeCategory ?? 'carryOn',
+  activeCabinClass: prefs.activeCabinClass ?? 'economy',
+  unitSystem: prefs.unitSystem ?? 'metric',
   theme: getInitialTheme(),
   userCountry: null,
   userCity: null,
-  sortBy: 'generosity',
+  sortBy: prefs.sortBy ?? 'generosity',
   comparisonList: [],
   selectedAirline: null,
   showComparison: false,
-  activeRegions: [],
-  userBag: null,
+  activeRegions: prefs.activeRegions ?? [],
+  userBag: prefs.userBag ?? null,
   showBagModal: false,
+  favorites: initialFavorites,
+  showFavoritesOnly: prefs.showFavoritesOnly ?? false,
 };
 
 // ── Derived filtered list ────────────────────────────────────────────
@@ -42,6 +50,9 @@ function computeFiltered(): void {
   }
   if (state.activeRegions.length > 0) {
     list = filterByRegion(list, state.activeRegions);
+  }
+  if (state.showFavoritesOnly) {
+    list = filterFavorites(list, state.favorites);
   }
   state.filteredAirlines = sortAirlines(list, state.sortBy);
 }
@@ -70,7 +81,8 @@ function render(): void {
           state.selectedAirline?.id ?? null,
           state.comparisonList,
           state.activeRegions,
-          state.userBag
+          state.userBag,
+          state.favorites
         )}
       </div>
     </main>
@@ -89,6 +101,18 @@ function render(): void {
   }
 
   attachEventListeners();
+
+  const prefs = {
+    searchQuery: state.searchQuery,
+    activeCategory: state.activeCategory,
+    activeCabinClass: state.activeCabinClass,
+    unitSystem: state.unitSystem,
+    sortBy: state.sortBy,
+    activeRegions: state.activeRegions,
+    showFavoritesOnly: state.showFavoritesOnly,
+    userBag: state.userBag,
+  };
+  localStorage.setItem('skybag-prefs', JSON.stringify(prefs));
 }
 
 // ── Event Listeners ──────────────────────────────────────────────────
@@ -168,11 +192,11 @@ function attachEventListeners(): void {
   });
 
   // Card click → open modal
-  document.querySelectorAll<HTMLElement>('[data-airline-id]').forEach(card => {
+  document.querySelectorAll<HTMLElement>('.card[data-airline-id]').forEach(card => {
     card.addEventListener('click', (e) => {
-      // Don't open modal when clicking compare 
+      // Don't open modal when clicking compare or favorite
       const target = e.target as HTMLElement;
-      if (target.closest('[data-compare]')) return;
+      if (target.closest('[data-compare]') || target.closest('.card__favorite-btn')) return;
       
       // If clicking region on the card, toggle it
       if (target.closest('[data-region]')) {
@@ -198,6 +222,30 @@ function attachEventListeners(): void {
         card.click();
       }
     });
+  });
+
+  // Favorite toggle on card
+  document.querySelectorAll<HTMLElement>('.card__favorite-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-airline-id');
+      if (!id) return;
+      if (state.favorites.includes(id)) {
+        state.favorites = state.favorites.filter(x => x !== id);
+      } else {
+        state.favorites = [...state.favorites, id];
+      }
+      localStorage.setItem('skybag-favorites', JSON.stringify(state.favorites));
+      computeFiltered();
+      render();
+    });
+  });
+
+  // Favorite filter toggle
+  document.getElementById('filter-favorites')?.addEventListener('click', () => {
+    state.showFavoritesOnly = !state.showFavoritesOnly;
+    computeFiltered();
+    render();
   });
 
   // Compare buttons

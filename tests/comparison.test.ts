@@ -6,7 +6,7 @@ import airlines from '../src/data/airlines';
 
 describe('Comparison data selection', () => {
   it('can select up to 3 airlines for comparison', () => {
-    const comparisonList = ['BA', 'EK', 'LH'];
+    const comparisonList = ['BRIAIR', 'EMI', 'LUF'];
     const selected = airlines.filter(a => comparisonList.includes(a.id));
     expect(selected.length).toBe(3);
   });

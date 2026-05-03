@@ -407,6 +407,35 @@ a { color: var(--accent); }
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
+}
+
+.card__favorite-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.card__favorite-btn:hover {
+  color: #f59e0b; /* amber-500 */
+  background: var(--bg-hover);
+}
+
+.card__favorite-btn--active {
+  color: #f59e0b;
+}
+
+.card__favorite-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .card__logo {
@@ -663,6 +692,12 @@ a { color: var(--accent); }
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+  .bag-form__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-group {
