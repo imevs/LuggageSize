@@ -191,16 +191,48 @@ function attachEventListeners(): void {
     render();
   });
 
-  // Card click → open modal
-  document.querySelectorAll<HTMLElement>('.card[data-airline-id]').forEach(card => {
-    card.addEventListener('click', (e) => {
-      // Don't open modal when clicking compare or favorite
+  // Grid Interactions (Event Delegation)
+  const gridContainer = document.getElementById('grid-container');
+  if (gridContainer) {
+    gridContainer.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
-      if (target.closest('[data-compare]') || target.closest('.card__favorite-btn')) return;
-      
-      // If clicking region on the card, toggle it
-      if (target.closest('[data-region]')) {
-        const region = target.closest('[data-region]')?.getAttribute('data-region');
+
+      // 1. Compare button
+      const compareBtn = target.closest<HTMLButtonElement>('[data-compare]');
+      if (compareBtn) {
+        e.stopPropagation();
+        const id = compareBtn.dataset['compare']!;
+        if (state.comparisonList.includes(id)) {
+          state.comparisonList = state.comparisonList.filter(x => x !== id);
+        } else if (state.comparisonList.length < 3) {
+          state.comparisonList = [...state.comparisonList, id];
+        }
+        render();
+        return;
+      }
+
+      // 2. Favorite button
+      const favBtn = target.closest<HTMLButtonElement>('.card__favorite-btn');
+      if (favBtn) {
+        e.stopPropagation();
+        const id = favBtn.getAttribute('data-airline-id');
+        if (!id) return;
+        if (state.favorites.includes(id)) {
+          state.favorites = state.favorites.filter(x => x !== id);
+        } else {
+          state.favorites = [...state.favorites, id];
+        }
+        localStorage.setItem('skybag-favorites', JSON.stringify(state.favorites));
+        computeFiltered();
+        render();
+        return;
+      }
+
+      // 3. Region tag
+      const regionBtn = target.closest<HTMLElement>('.card__region-tag[data-region]');
+      if (regionBtn) {
+        e.stopPropagation();
+        const region = regionBtn.getAttribute('data-region');
         if (region) {
           if (state.activeRegions.includes(region)) {
             state.activeRegions = state.activeRegions.filter(x => x !== region);
@@ -212,54 +244,35 @@ function attachEventListeners(): void {
         }
         return;
       }
-      const id = card.dataset['airlineId']!;
-      state.selectedAirline = state.airlines.find(a => a.id === id) ?? null;
-      render();
-    });
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        card.click();
-      }
-    });
-  });
 
-  // Favorite toggle on card
-  document.querySelectorAll<HTMLElement>('.card__favorite-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const id = btn.getAttribute('data-airline-id');
-      if (!id) return;
-      if (state.favorites.includes(id)) {
-        state.favorites = state.favorites.filter(x => x !== id);
-      } else {
-        state.favorites = [...state.favorites, id];
+      // 4. Card click
+      const card = target.closest<HTMLElement>('.card[data-airline-id]');
+      if (card) {
+        const id = card.dataset['airlineId']!;
+        state.selectedAirline = state.airlines.find(a => a.id === id) ?? null;
+        render();
       }
-      localStorage.setItem('skybag-favorites', JSON.stringify(state.favorites));
-      computeFiltered();
-      render();
     });
-  });
+
+    // Handle keyboard interaction for cards
+    gridContainer.addEventListener('keydown', (e) => {
+      const target = e.target as HTMLElement;
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = target.closest<HTMLElement>('.card[data-airline-id]');
+        // Only trigger click if the target is the card itself (not a button inside it)
+        if (card && target === card) {
+          e.preventDefault();
+          card.click();
+        }
+      }
+    });
+  }
 
   // Favorite filter toggle
   document.getElementById('filter-favorites')?.addEventListener('click', () => {
     state.showFavoritesOnly = !state.showFavoritesOnly;
     computeFiltered();
     render();
-  });
-
-  // Compare buttons
-  document.querySelectorAll<HTMLButtonElement>('[data-compare]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const id = btn.dataset['compare']!;
-      if (state.comparisonList.includes(id)) {
-        state.comparisonList = state.comparisonList.filter(x => x !== id);
-      } else if (state.comparisonList.length < 3) {
-        state.comparisonList = [...state.comparisonList, id];
-      }
-      render();
-    });
   });
 
   // Open comparison panel
@@ -376,42 +389,7 @@ function updateGrid(): void {
     state.activeRegions,
     state.userBag
   );
-  // Re-attach card listeners only
-  document.querySelectorAll<HTMLElement>('[data-airline-id]').forEach(card => {
-    card.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      if (target.closest('[data-compare]')) return;
-      
-      if (target.closest('[data-region]')) {
-        const region = target.closest('[data-region]')?.getAttribute('data-region');
-        if (region) {
-          if (state.activeRegions.includes(region)) {
-            state.activeRegions = state.activeRegions.filter(x => x !== region);
-          } else {
-            state.activeRegions = [...state.activeRegions, region];
-          }
-          computeFiltered();
-          render();
-        }
-        return;
-      }
-      const id = card.dataset['airlineId']!;
-      state.selectedAirline = state.airlines.find(a => a.id === id) ?? null;
-      render();
-    });
-  });
-  document.querySelectorAll<HTMLButtonElement>('[data-compare]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const id = btn.dataset['compare']!;
-      if (state.comparisonList.includes(id)) {
-        state.comparisonList = state.comparisonList.filter(x => x !== id);
-      } else if (state.comparisonList.length < 3) {
-        state.comparisonList = [...state.comparisonList, id];
-      }
-      render();
-    });
-  });
+
 
   // Update results count
   const countEl = document.getElementById('results-count');
