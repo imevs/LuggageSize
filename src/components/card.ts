@@ -20,12 +20,20 @@ function logoUrl(iata: string): string {
 
 let _svgN = 0;
 
+const svgCache = new Map<string, string>();
+
 function renderLuggageSvg(
   dims: Dimensions | null,
   system: UnitSystem,
   exceeds: { bag: boolean; h: boolean; w: boolean; d: boolean },
 ): string {
+  const cacheKey = JSON.stringify({ dims, system, exceeds });
   const id = `s${++_svgN}`;
+
+  if (svgCache.has(cacheKey)) {
+    return svgCache.get(cacheKey)!.replace(/__ID__/g, id);
+  }
+
   const VW = 280, VH = 215;
 
   // colour palette (always use indigo for the bag shell so red arrows pop)
@@ -71,28 +79,28 @@ function renderLuggageSvg(
 
   // SVG defs – gradients
   const defs = `<defs>
-    <linearGradient id="${id}f" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="__ID__f" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="${P}" stop-opacity="${fa + 0.06}"/>
       <stop offset="100%" stop-color="${P2}" stop-opacity="${fa + 0.04}"/>
     </linearGradient>
-    <linearGradient id="${id}t" x1="0" y1="1" x2="1" y2="0">
+    <linearGradient id="__ID__t" x1="0" y1="1" x2="1" y2="0">
       <stop offset="0%" stop-color="${P}" stop-opacity="${ta}"/>
       <stop offset="100%" stop-color="${P}" stop-opacity="${ta - 0.02}"/>
     </linearGradient>
-    <linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="__ID__s" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="${P2}" stop-opacity="${sa + 0.04}"/>
       <stop offset="100%" stop-color="${P3}" stop-opacity="${sa + 0.06}"/>
     </linearGradient>
-    <linearGradient id="${id}r" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="__ID__r" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="${P}" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="${P2}" stop-opacity="0.85"/>
     </linearGradient>
   </defs>`;
 
   // faces
-  const faceSide = `<polygon points="${pp(fbr, bbr, btr, ftr)}" fill="url(#${id}s)" stroke="${P}" stroke-width="1.6" stroke-linejoin="round"/>`;
-  const faceTop = `<polygon points="${pp(ftl, ftr, btr, btl)}" fill="url(#${id}t)" stroke="${P}" stroke-width="1.6" stroke-linejoin="round"/>`;
-  const faceFront = `<polygon points="${pp(fbl, fbr, ftr, ftl)}" fill="url(#${id}f)" stroke="${P}" stroke-width="1.7" stroke-linejoin="round"/>`;
+  const faceSide = `<polygon points="${pp(fbr, bbr, btr, ftr)}" fill="url(#__ID__s)" stroke="${P}" stroke-width="1.6" stroke-linejoin="round"/>`;
+  const faceTop = `<polygon points="${pp(ftl, ftr, btr, btl)}" fill="url(#__ID__t)" stroke="${P}" stroke-width="1.6" stroke-linejoin="round"/>`;
+  const faceFront = `<polygon points="${pp(fbl, fbr, ftr, ftl)}" fill="url(#__ID__f)" stroke="${P}" stroke-width="1.7" stroke-linejoin="round"/>`;
   const backEdges = `
     <line x1="${f(bbl[0])}" y1="${f(bbl[1])}" x2="${f(bbr[0])}" y2="${f(bbr[1])}" stroke="${P}" stroke-width="0.7" stroke-dasharray="3,2" stroke-opacity="0.35"/>
     <line x1="${f(bbl[0])}" y1="${f(bbl[1])}" x2="${f(btl[0])}" y2="${f(btl[1])}" stroke="${P}" stroke-width="0.7" stroke-dasharray="3,2" stroke-opacity="0.35"/>
@@ -169,8 +177,8 @@ function renderLuggageSvg(
   const rTop = y0 - pH - 24, rBot = y0 - pH;
   const rodH = rBot - rTop;
   const handle = `
-    <rect x="${f(r1X)}" y="${f(rTop)}" width="${f(rW)}" height="${f(rodH)}" rx="2" fill="url(#${id}r)" stroke="${P}" stroke-width="0.8"/>
-    <rect x="${f(r2X)}" y="${f(rTop)}" width="${f(rW)}" height="${f(rodH)}" rx="2" fill="url(#${id}r)" stroke="${P}" stroke-width="0.8"/>
+    <rect x="${f(r1X)}" y="${f(rTop)}" width="${f(rW)}" height="${f(rodH)}" rx="2" fill="url(#__ID__r)" stroke="${P}" stroke-width="0.8"/>
+    <rect x="${f(r2X)}" y="${f(rTop)}" width="${f(rW)}" height="${f(rodH)}" rx="2" fill="url(#__ID__r)" stroke="${P}" stroke-width="0.8"/>
     <circle cx="${f(r1X + rW / 2)}" cy="${f(rBot - 7)}" r="2.2" fill="${P2}" fill-opacity="0.9"/>
     <circle cx="${f(r2X + rW / 2)}" cy="${f(rBot - 7)}" r="2.2" fill="${P2}" fill-opacity="0.9"/>
     <rect x="${f(r1X)}" y="${f(rTop)}" width="${f(r2X + rW - r1X)}" height="${f(Math.max(10, pH * 0.09))}" rx="${f(Math.max(10, pH * 0.09) / 2)}" fill="${P}" fill-opacity="0.72" stroke="${P}" stroke-width="1"/>
@@ -211,7 +219,7 @@ function renderLuggageSvg(
   const wArr = arr(x0, y0 + 12, x0 + pW, y0 + 12, wLbl, x0 + pW / 2, y0 + 24, wc, 'middle');
   const dArr = arr(fbr[0] + 6, fbr[1] + 10, bbr[0] + 6, bbr[1] + 10, dLbl, fbr[0] + ox / 2 + 12, fbr[1] - oy / 2 + 24, dc, 'middle');
 
-  return `<svg viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg" class="luggage-svg" aria-hidden="true">
+  const templateSvg = `<svg viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg" class="luggage-svg" aria-hidden="true">
   ${defs}
   ${backEdges}
   ${faceSide}${sideRibs}
@@ -222,6 +230,9 @@ function renderLuggageSvg(
   ${carryHandle}${wheels}${handle}
   ${hArr}${wArr}${dArr}
 </svg>`;
+
+  svgCache.set(cacheKey, templateSvg);
+  return templateSvg.replace(/__ID__/g, id);
 }
 
 export function renderGrid(
