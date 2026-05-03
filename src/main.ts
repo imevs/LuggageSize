@@ -6,7 +6,7 @@ import { detectLocation, getCountryName } from './utils/geo';
 import { searchAirlines, sortAirlines, filterByRegion, filterFavorites } from './utils/search';
 import { renderHeader } from './components/header';
 import { renderSearch } from './components/search';
-import { renderGrid } from './components/card';
+import { renderGrid, renderSharedSvgDefs } from './components/card';
 import { renderModal } from './components/modal';
 import { renderUserBagModal } from './components/userBag';
 import { renderComparison } from './components/comparison';
@@ -416,6 +416,7 @@ function promptLocation(): void {
 
 async function bootstrap(): Promise<void> {
   applyTheme(state.theme);
+  document.body.insertAdjacentHTML('afterbegin', renderSharedSvgDefs());
 
   // Show app immediately with all airlines
   state.airlines = airlines;
