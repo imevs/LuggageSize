@@ -70,6 +70,15 @@ export function renderSearch(state: AppState): string {
             ${SORTS.map(s => `<option value="${s.id}" ${state.sortBy === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}
           </select>
         </div>
+        
+        <div class="view-controls" role="group" aria-label="View mode toggle" style="display: flex; gap: 4px; margin-left: 8px;">
+          <button class="view-btn ${state.viewMode === 'grid' ? 'view-btn--active' : ''}" data-view="grid" aria-label="Grid view" title="Grid view" style="padding: 6px; border-radius: 6px; border: 1px solid var(--border); background: ${state.viewMode === 'grid' ? 'var(--bg-card-hover)' : 'transparent'}; color: ${state.viewMode === 'grid' ? 'var(--text-primary)' : 'var(--text-muted)'}; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          </button>
+          <button class="view-btn ${state.viewMode === 'table' ? 'view-btn--active' : ''}" data-view="table" aria-label="Table view" title="Table view" style="padding: 6px; border-radius: 6px; border: 1px solid var(--border); background: ${state.viewMode === 'table' ? 'var(--bg-card-hover)' : 'transparent'}; color: ${state.viewMode === 'table' ? 'var(--text-primary)' : 'var(--text-muted)'}; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          </button>
+        </div>
       </div>
 
       <div class="region-tags-panel" style="margin-top: 16px; margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 0.82rem; color: var(--text-muted);">

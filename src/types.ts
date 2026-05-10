@@ -81,5 +81,6 @@ export interface AppState {
   showBagModal: boolean;
   favorites: string[];
   showFavoritesOnly: boolean;
+  viewMode: 'grid' | 'table';
 }
 

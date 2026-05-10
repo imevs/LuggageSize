@@ -7,6 +7,7 @@ import { searchAirlines, sortAirlines, filterByRegion, filterFavorites } from '.
 import { renderHeader } from './components/header';
 import { renderSearch } from './components/search';
 import { renderGrid, renderSharedSvgDefs } from './components/card';
+import { renderTable } from './components/table';
 import { renderModal } from './components/modal';
 import { renderUserBagModal } from './components/userBag';
 import { renderComparison } from './components/comparison';
@@ -39,6 +40,7 @@ const state: AppState = {
   showBagModal: false,
   favorites: initialFavorites,
   showFavoritesOnly: prefs.showFavoritesOnly ?? false,
+  viewMode: prefs.viewMode ?? 'grid',
 };
 
 // ── Derived filtered list ────────────────────────────────────────────
@@ -74,7 +76,16 @@ function render(): void {
           )
         : ''}
       <div id="grid-container">
-        ${renderGrid(
+        ${state.viewMode === 'table' ? renderTable(
+          state.filteredAirlines,
+          state.activeCategory,
+          state.unitSystem,
+          state.selectedAirline?.id ?? null,
+          state.comparisonList,
+          state.activeRegions,
+          state.userBag,
+          state.favorites
+        ) : renderGrid(
           state.filteredAirlines,
           state.activeCategory,
           state.unitSystem,
@@ -111,6 +122,7 @@ function render(): void {
     activeRegions: state.activeRegions,
     showFavoritesOnly: state.showFavoritesOnly,
     userBag: state.userBag,
+    viewMode: state.viewMode,
   };
   localStorage.setItem('skybag-prefs', JSON.stringify(prefs));
 }
@@ -151,6 +163,17 @@ function attachEventListeners(): void {
     btn.addEventListener('click', () => {
       state.activeCategory = btn.dataset['category'] as BagCategory;
       render();
+    });
+  });
+
+  // View mode toggle
+  document.querySelectorAll<HTMLButtonElement>('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const view = btn.dataset['view'] as 'grid' | 'table';
+      if (state.viewMode !== view) {
+        state.viewMode = view;
+        render();
+      }
     });
   });
 
@@ -251,10 +274,22 @@ function attachEventListeners(): void {
         const id = card.dataset['airlineId']!;
         state.selectedAirline = state.airlines.find(a => a.id === id) ?? null;
         render();
+        return;
+      }
+
+      // 5. Table row click or Details button
+      const row = target.closest<HTMLElement>('.data-row[data-airline-id]');
+      const detailsBtn = target.closest<HTMLElement>('.view-details-btn');
+      if (row || detailsBtn) {
+        const id = (row || target.closest<HTMLElement>('.data-row'))?.dataset['airlineId'];
+        if (id) {
+          state.selectedAirline = state.airlines.find(a => a.id === id) ?? null;
+          render();
+        }
       }
     });
 
-    // Handle keyboard interaction for cards
+    // Handle keyboard interaction for cards and table rows
     gridContainer.addEventListener('keydown', (e) => {
       const target = e.target as HTMLElement;
       if (e.key === 'Enter' || e.key === ' ') {
@@ -263,6 +298,12 @@ function attachEventListeners(): void {
         if (card && target === card) {
           e.preventDefault();
           card.click();
+        }
+        
+        const row = target.closest<HTMLElement>('.data-row[data-airline-id]');
+        if (row && target === row) {
+          e.preventDefault();
+          row.click();
         }
       }
     });
@@ -380,15 +421,30 @@ function handleKeydown(e: KeyboardEvent): void {
 function updateGrid(): void {
   const container = document.getElementById('grid-container');
   if (!container) return;
-  container.innerHTML = renderGrid(
-    state.filteredAirlines,
-    state.activeCategory,
-    state.unitSystem,
-    state.selectedAirline?.id ?? null,
-    state.comparisonList,
-    state.activeRegions,
-    state.userBag
-  );
+  
+  if (state.viewMode === 'table') {
+    container.innerHTML = renderTable(
+      state.filteredAirlines,
+      state.activeCategory,
+      state.unitSystem,
+      state.selectedAirline?.id ?? null,
+      state.comparisonList,
+      state.activeRegions,
+      state.userBag,
+      state.favorites
+    );
+  } else {
+    container.innerHTML = renderGrid(
+      state.filteredAirlines,
+      state.activeCategory,
+      state.unitSystem,
+      state.selectedAirline?.id ?? null,
+      state.comparisonList,
+      state.activeRegions,
+      state.userBag,
+      state.favorites
+    );
+  }
 
 
   // Update results count
